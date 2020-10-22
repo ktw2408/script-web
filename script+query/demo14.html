@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <a id="anchor" href="http://opentutorials.org">opentutorials</a>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="list">JavaScript</li>
+    </ul>
+    <input type="button" id="button" value="button" />
+    <script>
+        console.group('before');
+        var lis = document.getElementsByTagName('li');
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        console.groupEnd();
+
+        console.group('after');
+        lis[1].parentNode.removeChild(lis[1]);
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        console.groupEnd();
+    </script>
+</body>
+</html>

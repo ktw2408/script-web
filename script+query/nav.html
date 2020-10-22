@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>현재 브라우저 이름</h1>
+    <script>
+        document.write("현재 사용중인 브라우저의 이름은" + navigator.appName + "입니다.<br>"); 
+        document.write("해당 브라우저의 코드명은" + navigator.appCodeName + "입니다.<br>");
+        document.write("브라우저 버전 정보는" + navigator.appVersion + "입니다.<br>");
+        document.write("userAgent 프로퍼티로 알 수 있는 추가 정보는" + navigator.userAgent + "입니다.<br>")
+        document.write("플랫폼 정보는" + navigator.platform + "입니다.<br>");
+    </script>
+    <script>
+        document.write("현재 브라우저에서 자바 애플릿이");
+        if (navigator.javaEnabled()) {
+            document.write("실행중입니다.");
+        } else {
+            document.write("실행되지 않습니다.");
+        }
+    </script>
+</body>
+</html>

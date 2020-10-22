@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <a id="anchor" href="http://opentutorials.org">opentutorials</a>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="list">JavaScript</li>
+    </ul>
+    <input type="button" id="button" value="button" />
+    <script>
+        var target = document.getElementById('list');
+        console.log(target.constructor.name);
+
+        var target = document.getElementById('anchor');
+        console.log(target.constructor.name);
+
+        var target = document.getElementById('button');
+        console.log(target.constructor.name);
+    </script>
+</body>
+</html>
