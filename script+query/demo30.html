@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+</head>
+<body id="target">
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="target">JavaScript</li>
+    </ul>
+    <input type="button" onclick="callReplaceChild();" value="replaceChild()" />
+    <script>
+        function callReplaceChild() {
+            var a = document.createElement('a');
+            a.setAttribute('href', 'http://opentutorials.org/module/904/6701');
+            a.appendChild(document.createTextNode('Web browser JavaScript'));
+
+            var target = document.getElementById('target');
+            target.replaceChild(a, target.firstChild);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        #target2 {
+            font-size: 77px;
+            font-family: georgia;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="target1">html</li>
+        <li>css</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        var t = document.getElementById('target').firstChild;
+        console.log(t.nodeValue);
+        console.log(t.data);
+    </script>
+    <p id="target2">Cording everybody!</p>
+    <p> data : <input type="text" id="datasource" value="JavaScript" /></p>
+    <p>   start :<input type="text" id="start" value="5" /></p>
+    <p> end : <input type="text" id="end" value="5" /></p>
+    <p>
+        <input type="button" value="appendData(data)" onclick="callAppendData()" />
+        <input type="button" value="deleteData(start,end)" onclick="callDeleteData()" />
+        <input type="button" value="insertData(start,data)" onclick="callInsertData()" />
+        <input type="button" value="replaceData(start,end,data)" onclick="callReplaceData()" />
+        <input type="button" value="substringData(start,end)" onclick="callSubstringData()" />
+    </p>
+    <script>
+        var target = document.getElementById('target2').firstChild;
+        var data = document.getElementById('datasource');
+        var start = document.getElementById('start');
+        var end = document.getElementById('end');
+        function callAppendData() {
+            target.appendData(data.value);
+        }
+        function callDeleteData() {
+            target.deleteData(start.value, end.value);
+        }
+        function callInsertData() {
+            target.insertData(start.value, data.value);
+        }
+        function callReplaceData() {
+            target.replaceData(start.value, end.value, data.value);
+        }
+        function callSubstringData() {
+            alert(target.substringData(start.value, end.value));
+        }
+    </script>
+</body>
+</html>
